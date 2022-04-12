@@ -1,0 +1,81 @@
+InParm 			# Input parameters. cm is used.
+objTemp2.mco 	A		# output file name, ASCII.
+100000 			# No. of photons
+0.003	0.005		# dz, dr [cm]
+5	2	3	# No. of dz, dr, da.
+
+1					# Number of layers
+2					# Embedded object code
+1					# Layer of object
+#n	mua	mus	g	d	# One line for each layer
+1					# n for medium above
+1.4	0.2525	254	0.9	30	# layer 1
+1					# n for medium below
+
+1.35	2.1	773	0.9						# Object properties 
+1.5						# Cylinder depth 
+
+
+0.5					# Cylinder radius (cr) 
+
+
+RAT #Reflectance, absorption, transmission. 
+0.0277778      	#Specular reflectance [-]
+0.602957       	#Diffuse reflectance [-]
+0.369266       	#Absorbed fraction [-]
+0              	#Transmittance [-]
+
+A_l #Absorption as a function of layers. [-]
+      0.3693
+Absorption in object. [-]
+    0.003129		
+ A_z #A[0], [1],..A[nz-1]. [1/cm]
+ 1.3689E+000
+ 1.3745E+000
+ 1.3840E+000
+ 1.3878E+000
+ 1.1757E+002
+
+Rd_r #Rd[0], [1],..Rd[nr-1]. [1/cm2]
+ 1.5238E+002
+ 2.5082E+003
+
+Rd_a #Rd[0], [1],..Rd[na-1]. [sr-1]
+ 1.8460E-001
+ 1.3495E-001
+ 4.1490E-002
+
+Tt_r #Tt[0], [1],..Tt[nr-1]. [1/cm2]
+ 0.0000E+000
+ 0.0000E+000
+
+Tt_a #Tt[0], [1],..Tt[na-1]. [sr-1]
+ 0.0000E+000
+ 0.0000E+000
+ 0.0000E+000
+
+# A[r][z]. [1/cm3]
+# A[0][0], [0][1],..[0][nz-1]
+# A[1][0], [1][1],..[1][nz-1]
+# ...
+# A[nr-1][0], [nr-1][1],..[nr-1][nz-1]
+A_rz
+ 3.4200E+003  3.3537E+003  3.1204E+003  2.7493E+003  1.0971E+004 
+ 4.6699E+003  4.7158E+003  4.8336E+003  4.9734E+003  4.9534E+005 
+
+# Rd[r][angle]. [1/(cm2sr)].
+# Rd[0][0], [0][1],..[0][na-1]
+# Rd[1][0], [1][1],..[1][na-1]
+# ...
+# Rd[nr-1][0], [nr-1][1],..[nr-1][na-1]
+Rd_ra
+ 5.2759E+001  4.8954E+001  3.6734E+001  8.0288E+002  8.0297E+002 
+ 6.7595E+002 
+# Tt[r][angle]. [1/(cm2sr)].
+# Tt[0][0], [0][1],..[0][na-1]
+# Tt[1][0], [1][1],..[1][na-1]
+# ...
+# Tt[nr-1][0], [nr-1][1],..[nr-1][na-1]
+Tt_ra
+ 0.0000E+000  0.0000E+000  0.0000E+000  0.0000E+000  0.0000E+000 
+ 0.0000E+000 

@@ -1,0 +1,81 @@
+InParm 			# Input parameters. cm is used.
+objTemp4.mco 	A		# output file name, ASCII.
+100000 			# No. of photons
+0.003	0.005		# dz, dr [cm]
+5	2	3	# No. of dz, dr, da.
+
+1					# Number of layers
+4					# Embedded object code
+1					# Layer of object
+#n	mua	mus	g	d	# One line for each layer
+1.3					# n for medium above
+1.4	0.2525	254	0.9	30	# layer 1
+1					# n for medium below
+
+1.3	1.7049	180	0.9						# Object properties 
+1.5						# Cuboid depth 
+
+
+0.5	0.8	1					# Cuboid dimensions (Lt, Bt, Ht) 
+
+
+RAT #Reflectance, absorption, transmission. 
+0.00137174     	#Specular reflectance [-]
+0.728826       	#Diffuse reflectance [-]
+0.269802       	#Absorbed fraction [-]
+0              	#Transmittance [-]
+
+A_l #Absorption as a function of layers. [-]
+      0.2698
+Absorption in object. [-]
+    0.001765		
+ A_z #A[0], [1],..A[nz-1]. [1/cm]
+ 8.2157E-001
+ 8.5071E-001
+ 8.9341E-001
+ 9.2881E-001
+ 8.6439E+001
+
+Rd_r #Rd[0], [1],..Rd[nr-1]. [1/cm2]
+ 2.5458E+002
+ 3.0084E+003
+
+Rd_a #Rd[0], [1],..Rd[na-1]. [sr-1]
+ 2.2290E-001
+ 1.6169E-001
+ 5.1263E-002
+
+Tt_r #Tt[0], [1],..Tt[nr-1]. [1/cm2]
+ 0.0000E+000
+ 0.0000E+000
+
+Tt_a #Tt[0], [1],..Tt[na-1]. [sr-1]
+ 0.0000E+000
+ 0.0000E+000
+ 0.0000E+000
+
+# A[r][z]. [1/cm3]
+# A[0][0], [0][1],..[0][nz-1]
+# A[1][0], [1][1],..[1][nz-1]
+# ...
+# A[nr-1][0], [nr-1][1],..[nr-1][nz-1]
+A_rz
+ 3.4864E+003  3.4435E+003  3.2023E+003  2.8181E+003  1.1152E+004 
+ 2.3247E+003  2.4627E+003  2.7243E+003  3.0026E+003  3.6314E+005 
+
+# Rd[r][angle]. [1/(cm2sr)].
+# Rd[0][0], [0][1],..[0][na-1]
+# Rd[1][0], [1][1],..[1][na-1]
+# ...
+# Rd[nr-1][0], [nr-1][1],..[nr-1][na-1]
+Rd_ra
+ 9.9711E+001  7.4387E+001  6.4611E+001  9.5741E+002  9.5685E+002 
+ 8.2876E+002 
+# Tt[r][angle]. [1/(cm2sr)].
+# Tt[0][0], [0][1],..[0][na-1]
+# Tt[1][0], [1][1],..[1][na-1]
+# ...
+# Tt[nr-1][0], [nr-1][1],..[nr-1][na-1]
+Tt_ra
+ 0.0000E+000  0.0000E+000  0.0000E+000  0.0000E+000  0.0000E+000 
+ 0.0000E+000 
